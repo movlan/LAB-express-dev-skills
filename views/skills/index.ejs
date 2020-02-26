@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head', { title : 'Skills'}) %> 
+<body>
+    <%- include('../partials/nav') %>
+    <div class="container">
+        <h1>My Developer Skills</h1>
+        <ul>
+            <% skills.forEach((skill, idx) => { %>
+                <li>
+                <a href="/skills/<%= idx %>"><%= skill.skill %></a>
+                </li>
+            <% }); %> 
+        </ul>
+        <a href="/skills/new">Add Skills</a>
+    </div>
+</body>
+<%- include('../partials/footer') %>
+</html>

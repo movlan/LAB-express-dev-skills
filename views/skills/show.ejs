@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head', { title : 'Skill #'+skillNum}) %>
+    <body>
+        <%- include('../partials/nav') %>
+        <div class="container">
+            <h1>Skill #<%= skillNum %></h1>
+            <h3><%= skill.skill %></h3>
+            <form action="/skills/<%= skillNum-1 %>?_method=DELETE" method="POST">
+                <input type="submit" value="Delete Skill">
+            </form>
+            <form action="/skills/<%= skillNum-1 %>/edit">
+                <input type="submit" value="Edit Skill">
+            </form>
+            <!-- <a href="" method>Delete Skill</a> -->
+        </div>
+    </body>
+    <%- include('../partials/footer') %>
+</html>
